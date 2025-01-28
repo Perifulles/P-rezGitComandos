@@ -6,3 +6,4 @@
 6. sed 's/.com/.net/g' datos.txt
 7. cut -d "," -f5 datos.txt | grep -c "-"
 8. awk -F"," '$3 > 40 {print $2" | " $3}' datos.txt
+9. awk -F"," '{print $2" "$5}' datos.txt | awk -F" " '{print $2"*"$3}'
